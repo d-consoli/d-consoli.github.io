@@ -8,6 +8,10 @@
       name="description"
       content="Unverged provides software and hardware engineering consultancy with a focus on cameras and embedded systems."
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&display=swap"
+    />
     <style>
       :root {
         --bg: #0f172a;
@@ -40,9 +44,25 @@
       }
 
       .brand {
-        font-size: 1.2rem;
+        font-family: "Sora", Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        font-size: clamp(1.3rem, 2vw, 1.55rem);
         font-weight: 700;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        display: inline-block;
+        position: relative;
+        padding-bottom: 0.35rem;
+      }
+
+      .brand::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 42%;
+        height: 2px;
+        border-radius: 999px;
+        background: var(--accent);
       }
 
       .hero {
@@ -66,27 +86,45 @@
         color: var(--accent);
       }
 
-      .services {
+      .work {
+        margin: 0 0 3rem;
+      }
+
+      .work h2 {
+        margin: 0 0 1rem;
+        font-size: clamp(1.4rem, 3.5vw, 2rem);
+      }
+
+      .work-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         gap: 1rem;
-        margin: 2rem 0 3rem;
       }
 
-      .card {
+      .work-card {
         background: rgba(31, 41, 55, 0.85);
         border: 1px solid rgba(156, 163, 175, 0.25);
         border-radius: 12px;
-        padding: 1.2rem;
+        overflow: hidden;
       }
 
-      .card h3 {
-        margin-top: 0;
-        margin-bottom: 0.5rem;
+      .work-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .work-content {
+        padding: 1rem;
+      }
+
+      .work-content h3 {
+        margin: 0 0 0.5rem;
         font-size: 1.05rem;
       }
 
-      .card p {
+      .work-content p {
         margin: 0;
         color: var(--muted);
       }
@@ -130,30 +168,45 @@
         </p>
       </section>
 
-      <section class="services" aria-label="Services">
-        <article class="card">
-          <h3>Camera Systems</h3>
-          <p>
-            Image pipeline architecture, sensor integration, tuning, and
-            performance optimization for reliable visual systems.
-          </p>
-        </article>
+      <section class="work" aria-label="Featured work">
+        <h2>What We Build</h2>
+        <div class="work-grid">
+          <article class="work-card">
+            <img src="cameras.jpg" alt="Camera engineering setup and components" />
+            <div class="work-content">
+              <h3>Camera Engineering</h3>
+              <p>
+                Development and optimization of camera pipelines, from sensor
+                integration to robust imaging performance.
+              </p>
+            </div>
+          </article>
 
-        <article class="card">
-          <h3>Embedded Software</h3>
-          <p>
-            Firmware design, low-level driver development, and real-time
-            application support for constrained platforms.
-          </p>
-        </article>
+          <article class="work-card">
+            <img
+              src="embedded_systems.jpg"
+              alt="Embedded systems development hardware"
+            />
+            <div class="work-content">
+              <h3>Embedded Systems</h3>
+              <p>
+                Firmware and low-level software solutions for reliable,
+                high-performance embedded platforms.
+              </p>
+            </div>
+          </article>
 
-        <article class="card">
-          <h3>Hardware Engineering</h3>
-          <p>
-            Board-level design support, bring-up guidance, and cross-functional
-            HW/SW integration to accelerate delivery.
-          </p>
-        </article>
+          <article class="work-card">
+            <img src="3D_print.jpg" alt="3D printed prototype component" />
+            <div class="work-content">
+              <h3>3D Printing</h3>
+              <p>
+                I make prototypes with a 3D printer to quickly validate design
+                ideas and iterate on hardware concepts.
+              </p>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="cta">

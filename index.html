@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unverged | SW & HW Engineering Consultancy</title>
+    <meta
+      name="description"
+      content="Unverged provides software and hardware engineering consultancy with a focus on cameras and embedded systems."
+    />
+    <style>
+      :root {
+        --bg: #0f172a;
+        --bg-soft: #111827;
+        --card: #1f2937;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #22d3ee;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        background: linear-gradient(160deg, var(--bg) 0%, var(--bg-soft) 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .container {
+        width: min(1100px, 92vw);
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 2rem 0 1rem;
+      }
+
+      .brand {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
+
+      .hero {
+        padding: 3.5rem 0 3rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1.15;
+      }
+
+      .subtitle {
+        margin-top: 1rem;
+        max-width: 70ch;
+        color: var(--muted);
+        font-size: 1.1rem;
+      }
+
+      .highlight {
+        color: var(--accent);
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0 3rem;
+      }
+
+      .card {
+        background: rgba(31, 41, 55, 0.85);
+        border: 1px solid rgba(156, 163, 175, 0.25);
+        border-radius: 12px;
+        padding: 1.2rem;
+      }
+
+      .card h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.05rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .cta {
+        padding: 1rem 0 4rem;
+      }
+
+      .cta a {
+        display: inline-block;
+        background: var(--accent);
+        color: #0b1120;
+        text-decoration: none;
+        font-weight: 700;
+        padding: 0.75rem 1.1rem;
+        border-radius: 10px;
+      }
+
+      footer {
+        border-top: 1px solid rgba(156, 163, 175, 0.25);
+        padding: 1.2rem 0 2rem;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container">
+      <div class="brand">Unverged</div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>
+          Consultancy for <span class="highlight">Software</span> and
+          <span class="highlight">Hardware</span> Engineering
+        </h1>
+        <p class="subtitle">
+          Unverged helps teams design, develop, and optimize advanced products,
+          with deep expertise in camera technology and embedded systems.
+        </p>
+      </section>
+
+      <section class="services" aria-label="Services">
+        <article class="card">
+          <h3>Camera Systems</h3>
+          <p>
+            Image pipeline architecture, sensor integration, tuning, and
+            performance optimization for reliable visual systems.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Embedded Software</h3>
+          <p>
+            Firmware design, low-level driver development, and real-time
+            application support for constrained platforms.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Hardware Engineering</h3>
+          <p>
+            Board-level design support, bring-up guidance, and cross-functional
+            HW/SW integration to accelerate delivery.
+          </p>
+        </article>
+      </section>
+
+      <section class="cta">
+        <a href="mailto:contact@unverged.com">Contact Unverged</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© 2026 Unverged. All rights reserved.</div>
+    </footer>
+  </body>
+</html>
